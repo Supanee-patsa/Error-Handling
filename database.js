@@ -1,4 +1,4 @@
-export function createReseservation(data, callback) {
+export function createReservation(data, callback) {
   setTimeout(() => {
     const error = Math.random() > 0.5 ? 'Database error: Failed to create reservation' : null;
     if (error) {
@@ -12,11 +12,11 @@ export function createReseservation(data, callback) {
 export function getReservations(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const error = Math.random() > 0.5 ? 'Database error: Failed to get reservations' : null;
+      const error = Math.random() > 0.5 ? 'Database error: Failed to retrive reservations' : null;
       if (error) {
         reject(error);
       } else {
-        resolve({ id: id, name: 'Sample Reservation' });
+        resolve({ id, name: 'Sample Reservation' });
       }
     }, 1000);
   });

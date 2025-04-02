@@ -14,7 +14,7 @@ app.post('/reserve', (req, res) => {
 
   app.listen(3000, () => console.log('Server running on port 3000'));
 
-  app.get('/reservations/:id', async (req, res) => {
+  app.get('/reservation/:id', async (req, res) => {
     try {
       const result = await getReservation(req.params.id);
       res.status(200).json({ message: 'Reservation found' , data: result });
